@@ -1,7 +1,10 @@
-import zipfile
 import os
+import zipfile
+from dotenv import load_dotenv
 
-DATA_DIR = r"D:\alex's folder\code\mcproj\data"
+load_dotenv()
+
+DATA_DIR = os.getenv("DATA_DIR")
 OUT_DIR = os.path.join(DATA_DIR, "sword")
 
 os.makedirs(OUT_DIR, exist_ok=True)
